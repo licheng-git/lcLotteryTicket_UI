@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 
-protocol bhTableCellDelegate : class {
+protocol bhTableCellDelegate: class {
     func dNumberTrend(_ cell: bhTableCell)
     //func dPrizeDetial(_ cell: bhTableCell)
 }
@@ -18,25 +18,25 @@ protocol bhTableCellDelegate : class {
 
 class bhTableCell: UITableViewCell {
     
-    static let bhHeight : CGFloat = 100
+    static let bhHeight: CGFloat = 100
     
     weak var delegate: bhTableCellDelegate?
     //var cNumberTrend: ((_ cell: bhTableCell)->())?
     var cPrizeDetail: ((_ cell: bhTableCell)->Void)?
     
-    let imgviewIcon : UIImageView = {
+    let imgviewIcon: UIImageView = {
         let imgview = UIImageView()
         return imgview
     } ()
     
-    let lbName : UILabel = {
+    let lbName: UILabel = {
         let lb = UILabel()
         lb.textAlignment = .left
         lb.font = UIFont.systemFont(ofSize: 16)
         return lb
     } ()
     
-    let lbDescription : UILabel = {
+    let lbDescription: UILabel = {
         let lb = UILabel()
         lb.textAlignment = .left
         lb.font = UIFont.systemFont(ofSize: 14)
@@ -44,7 +44,7 @@ class bhTableCell: UITableViewCell {
         return lb
     } ()
     
-    let lbTime : UILabel = {
+    let lbTime: UILabel = {
         let lb = UILabel()
         lb.textAlignment = .right
         lb.font = UIFont.systemFont(ofSize: 14)

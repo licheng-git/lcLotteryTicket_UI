@@ -10,10 +10,10 @@ import Foundation
 
 class BuyingHall_ViewModel {
     
-    //var model: BuyingHall_Model?
     var arrModels = [BuyingHall_Model]()
     
-    func getData(_ selectType: Int) {
+    //func getData(_ selectType: Int) {
+    func getData(_ selectType: Int, _ cComplete:((_ model:Array<BuyingHall_Model>)->())?) {
         self.arrModels.removeAll()
         var arrData = [Any]()
         if selectType == 0 {  // 热门彩种
@@ -62,6 +62,9 @@ class BuyingHall_ViewModel {
             model.desc = dictItem["description"]
             model.time_int = Int(dictItem["time"]!)
             self.arrModels.append(model)
+        }
+        if cComplete != nil {
+            cComplete!(self.arrModels)
         }
     }
     

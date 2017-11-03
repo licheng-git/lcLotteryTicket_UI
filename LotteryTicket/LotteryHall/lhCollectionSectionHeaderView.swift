@@ -11,7 +11,7 @@ import SnapKit
 
 class lhCollectionSectionHeaderView: UICollectionReusableView {
     
-    let lbName : UILabel = {
+    let lbName: UILabel = {
         let lb = UILabel()
         lb.textAlignment = .left
         lb.font = UIFont.systemFont(ofSize: 16)

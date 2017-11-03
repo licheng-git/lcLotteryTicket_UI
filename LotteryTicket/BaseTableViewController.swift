@@ -1,40 +1,36 @@
 //
-//  PrizeAnnounceViewController.swift
+//  BaseTableViewController.swift
 //  LotteryTicket
 //
-//  Created by 李诚 on 17/10/26.
+//  Created by Cheng Li on 2017/11/3.
 //  Copyright © 2017年 李诚. All rights reserved.
 //
 
 import UIKit
 import SnapKit
 
-class PrizeAnnounceViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BaseTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let vm = PrizeAnnounce_ViewModel()
-    
-    lazy var paTableview: UITableView = {
+    lazy var myTableview: UITableView = {
         //let tableview = UITableView(frame: CGRect.zero, style: .plain)
         let tableview = UITableView()
         tableview.backgroundColor = UIColor.white
         tableview.dataSource = self
         tableview.delegate = self
-        tableview.register(paTableCell.classForCoder(), forCellReuseIdentifier: "CellId")
+        tableview.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "CellId")    // tableview.register(myTableCell.classForCoder(), forCellReuseIdentifier: "CellId")
         tableview.separatorStyle = .none
         return tableview
     } ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "卡司秀彩票"
         self.automaticallyAdjustsScrollViewInsets = false
-        self.view.addSubview(self.paTableview)
-        self.paTableview.snp.makeConstraints { (make) in
+        self.view.addSubview(self.myTableview)
+        self.myTableview.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(kDEFAULT_MARGIN_Y)
-            make.bottom.equalToSuperview().offset(-kBOTTOM_HEIGHT)
             make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-kBOTTOM_HEIGHT)
         }
-        self.vm.getData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,26 +38,22 @@ class PrizeAnnounceViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.vm.arrModels.count
+        return 0    // return self.vm.arrModels.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return paTableCell.paHeight
+        return 0    // return myTableCell.myHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! paTableCell
-        let model = self.vm.arrModels[indexPath.row]
-        cell.imgviewIcon.image = UIImage(named: model.iconImgName!)
-        cell.lbName.text = model.name!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)    // as! myTableCell
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         //let cell = tableView.cellForRow(at: indexPath)
-        let vc = PrizeResultViewController()
-        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
 
 }
+

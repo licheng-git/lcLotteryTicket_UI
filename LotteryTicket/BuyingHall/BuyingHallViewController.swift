@@ -12,12 +12,12 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
     
     let vm = BuyingHall_ViewModel()
     
-    lazy var selectBtnsView : SelectButtonsView = {
+    lazy var selectBtnsView: SelectButtonsView = {
         let view = SelectButtonsView()
         return view
     } ()
     
-    lazy var bhTableview : UITableView = {
+    lazy var bhTableview: UITableView = {
         //let tableview = UITableView(frame: CGRect.zero, style: .plain)
         let tableview = UITableView()
         tableview.backgroundColor = UIColor.white
@@ -47,8 +47,9 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.selectBtnsView.cBtnClick = { [weak self] (_ index:Int) -> () in
             self?.cleanCellTimer()
-            self?.vm.getData(index)
-            self?.bhTableview.reloadData()
+            self?.vm.getData(index) { [weak self] (arrModels) in
+                self?.bhTableview.reloadData()
+            }
         }
         //self.selectBtnsView.defaultClickedIndex = -1
     }

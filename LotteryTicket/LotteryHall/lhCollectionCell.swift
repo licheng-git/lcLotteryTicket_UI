@@ -11,12 +11,12 @@ import SnapKit
 
 class lhCollectionCell: UICollectionViewCell {
     
-    let imgviewIcon : UIImageView = {
+    let imgviewIcon: UIImageView = {
         let imgview = UIImageView()
         return imgview
     } ()
     
-    let lbName : UILabel = {
+    let lbName: UILabel = {
         let lb = UILabel()
         lb.textAlignment = .center
         lb.font = UIFont.systemFont(ofSize: 14)

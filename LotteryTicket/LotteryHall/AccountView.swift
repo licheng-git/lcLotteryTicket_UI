@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountView : UIView {
+class AccountView: UIView {
     
     @IBOutlet weak var lbAccount: UILabel!
     @IBOutlet weak var lbAmount: UILabel!

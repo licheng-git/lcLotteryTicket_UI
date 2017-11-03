@@ -11,7 +11,7 @@ import SnapKit
 
 class RunningTipView: UIView {
     
-    lazy var lbText : UILabel = {
+    lazy var lbText: UILabel = {
         let lb = UILabel()
         lb.textAlignment = .left
         lb.font = UIFont.systemFont(ofSize: 14)
@@ -66,7 +66,7 @@ class RunningTipView: UIView {
     func keepRunning() {
         //print("lb.w=\(self.lbText.bounds.size.width), lb.x=\(self.lbText.frame.origin.x)")
         self.bIsRunning = true
-        let translateX : CGFloat = 5
+        let translateX: CGFloat = 5
         UIView.animate(withDuration: 0.1, animations: {
             self.lbText.frame.origin.x -= translateX
         }) { (finished) in

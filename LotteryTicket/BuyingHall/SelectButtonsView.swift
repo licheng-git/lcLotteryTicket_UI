@@ -36,7 +36,7 @@ class SelectButtonsView: UIScrollView {
         //print("SelectButtonsView draw frame=\(rect)")
         let btnW: CGFloat = 80
         var btnX: CGFloat = 0
-        var btnDefault : UIButton?
+        var btnDefault: UIButton?
         for i in 0..<arrData.count {
             let btn = UIButton(type: .custom)
             btn.setTitle(arrData[i], for: .normal)

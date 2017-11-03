@@ -16,6 +16,11 @@
 		5A15040F1FA1B482000FCB58 /* PrizeAnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15040E1FA1B482000FCB58 /* PrizeAnnounceViewController.swift */; };
 		5A1504111FA1B4A2000FCB58 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1504101FA1B4A2000FCB58 /* UserCenterViewController.swift */; };
 		5A1505E91FA96D2B00F5A8C0 /* bhTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1505E81FA96D2B00F5A8C0 /* bhTableCell.swift */; };
+		5A32BB991FAC09030056EA76 /* ucHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB981FAC09030056EA76 /* ucHeaderView.swift */; };
+		5A32BB9B1FAC14460056EA76 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB9A1FAC14460056EA76 /* BaseTableViewController.swift */; };
+		5A32BB9D1FAC18F80056EA76 /* ucTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB9C1FAC18F80056EA76 /* ucTableCell.swift */; };
+		5A32BB9F1FAC1B440056EA76 /* UserCenter_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB9E1FAC1B440056EA76 /* UserCenter_Model.swift */; };
+		5A32BBA11FAC1B5C0056EA76 /* UserCenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BBA01FAC1B5C0056EA76 /* UserCenter_ViewModel.swift */; };
 		5A45664C1FA72DEF008971AE /* RunningTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A45664B1FA72DEF008971AE /* RunningTipView.swift */; };
 		5A45664E1FA73380008971AE /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A45664D1FA73380008971AE /* AccountView.swift */; };
 		5A8BB3981FA3415B007A5397 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8BB3971FA3415B007A5397 /* Constants.swift */; };
@@ -52,6 +57,11 @@
 		5A15040E1FA1B482000FCB58 /* PrizeAnnounceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeAnnounceViewController.swift; sourceTree = "<group>"; };
 		5A1504101FA1B4A2000FCB58 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterViewController.swift; sourceTree = "<group>"; };
 		5A1505E81FA96D2B00F5A8C0 /* bhTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bhTableCell.swift; sourceTree = "<group>"; };
+		5A32BB981FAC09030056EA76 /* ucHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ucHeaderView.swift; sourceTree = "<group>"; };
+		5A32BB9A1FAC14460056EA76 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		5A32BB9C1FAC18F80056EA76 /* ucTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ucTableCell.swift; sourceTree = "<group>"; };
+		5A32BB9E1FAC1B440056EA76 /* UserCenter_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter_Model.swift; sourceTree = "<group>"; };
+		5A32BBA01FAC1B5C0056EA76 /* UserCenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter_ViewModel.swift; sourceTree = "<group>"; };
 		5A45664B1FA72DEF008971AE /* RunningTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningTipView.swift; sourceTree = "<group>"; };
 		5A45664D1FA73380008971AE /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		5A8BB3971FA3415B007A5397 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -130,6 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				5A1504101FA1B4A2000FCB58 /* UserCenterViewController.swift */,
+				5A32BB981FAC09030056EA76 /* ucHeaderView.swift */,
+				5A32BB9C1FAC18F80056EA76 /* ucTableCell.swift */,
+				5A32BB9E1FAC1B440056EA76 /* UserCenter_Model.swift */,
+				5A32BBA01FAC1B5C0056EA76 /* UserCenter_ViewModel.swift */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -191,6 +205,7 @@
 				5A8BB3971FA3415B007A5397 /* Constants.swift */,
 				5A1503FF1FA190BD000FCB58 /* MainTabbarViewController.swift */,
 				5AC730CB1FAABDD000CE245E /* BaseViewController.swift */,
+				5A32BB9A1FAC14460056EA76 /* BaseTableViewController.swift */,
 				5A8C10041FA9E0B5001A2BC8 /* UIViewController+Extension.swift */,
 				5A8C10021FA9D184001A2BC8 /* WebViewController.swift */,
 				5AC730CD1FAB006B00CE245E /* Public */,
@@ -363,10 +378,12 @@
 				5A8BB3981FA3415B007A5397 /* Constants.swift in Sources */,
 				5A15040D1FA1B422000FCB58 /* BuyingHallViewController.swift in Sources */,
 				5A8C10031FA9D184001A2BC8 /* WebViewController.swift in Sources */,
+				5A32BBA11FAC1B5C0056EA76 /* UserCenter_ViewModel.swift in Sources */,
 				5AF2E59D1FAB288300908E3C /* PrizeAnnounce_Model.swift in Sources */,
 				5A1504091FA19D35000FCB58 /* lhCollectionCell.swift in Sources */,
 				5A8C0FFF1FA9B330001A2BC8 /* BuyingHall_Model.swift in Sources */,
 				5A45664C1FA72DEF008971AE /* RunningTipView.swift in Sources */,
+				5A32BB9B1FAC14460056EA76 /* BaseTableViewController.swift in Sources */,
 				5A15040A1FA19D35000FCB58 /* lhCollectionSectionHeaderView.swift in Sources */,
 				5AF2E59F1FAB289700908E3C /* PrizeAnnounce_ViewMondel.swift in Sources */,
 				5AE4F4561FA043AE007BD714 /* ViewController.swift in Sources */,
@@ -377,10 +394,13 @@
 				5A1504001FA190BD000FCB58 /* MainTabbarViewController.swift in Sources */,
 				5A1504061FA19A81000FCB58 /* LotteryHallViewController.swift in Sources */,
 				5AC730D11FAB012500CE245E /* SelectButtonsView.swift in Sources */,
+				5A32BB9F1FAC1B440056EA76 /* UserCenter_Model.swift in Sources */,
 				5A8C10011FA9B490001A2BC8 /* BuyingHall_ViewModel.swift in Sources */,
 				5A1505E91FA96D2B00F5A8C0 /* bhTableCell.swift in Sources */,
 				5AF2E59B1FAB256D00908E3C /* paTableCell.swift in Sources */,
 				5A45664E1FA73380008971AE /* AccountView.swift in Sources */,
+				5A32BB991FAC09030056EA76 /* ucHeaderView.swift in Sources */,
+				5A32BB9D1FAC18F80056EA76 /* ucTableCell.swift in Sources */,
 				5AD93AA41FA88275007FDED5 /* BuyingDetailViewController.swift in Sources */,
 				5A15040F1FA1B482000FCB58 /* PrizeAnnounceViewController.swift in Sources */,
 			);

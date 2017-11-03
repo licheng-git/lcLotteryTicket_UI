@@ -10,7 +10,7 @@ import UIKit
 
 class BuyingDetailViewController: UIViewController {
     
-    lazy var navTitleView : UIView = {
+    lazy var navTitleView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.green
         view.frame = CGRect(x: 10, y: 10, width: 100, height: 30)

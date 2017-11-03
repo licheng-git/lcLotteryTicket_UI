@@ -9,9 +9,9 @@
 import UIKit
 import SnapKit
 
-class BannerView : UIView {
+class BannerView: UIView {
     
-    lazy var imgview : UIImageView = {
+    lazy var imgview: UIImageView = {
         let imgview = UIImageView()
         imgview.image = UIImage(named: "banner")
         return imgview

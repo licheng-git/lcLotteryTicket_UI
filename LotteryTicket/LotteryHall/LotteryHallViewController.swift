@@ -11,7 +11,7 @@ import SnapKit
 
 class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    lazy var collectionView : UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kSCREEN_WIDTH/3-1, height: 100)
         layout.minimumLineSpacing = 0.5
@@ -27,22 +27,22 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
         return collectionView
     } ()
     
-    lazy var headerView : UIView = {
+    lazy var headerView: UIView = {
         let view = UIView()
         return view
     } ()
     
-    lazy var bannerView : BannerView = {
+    lazy var bannerView: BannerView = {
         let view = BannerView()
         return view
     } ()
     
-    lazy var runningTipView : RunningTipView = {
+    lazy var runningTipView: RunningTipView = {
         let view = RunningTipView()
         return view
     } ()
     
-    lazy var accountView : AccountView = {
+    lazy var accountView: AccountView = {
         let arr = Bundle.main.loadNibNamed("AccountView", owner: nil, options: nil)
         let view = arr![0] as! AccountView
         return view
@@ -53,8 +53,8 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
                                                     ["text":"极速快三", "img":"icon_k3"],
                                                     ["text":"极速飞车", "img":"icon_pk10"],
                                                     ["text":"极速六合彩", "img":"icon_lhc"]
-                                            ]
-        			],
+        ]
+        ],
                     ["name":"官方彩", "items":[ ["text":"天津时时彩", "img":"icon_ssc"],
                                                    ["text":"重庆时时彩", "img":"icon_ssc"],
                                                    ["text":"新疆时时彩", "img":"icon_ssc"],
@@ -68,9 +68,9 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
                                                    ["text":"福彩3D", "img":"icon_3d"],
                                                    ["text":"排列5", "img":"icon_pl5"],
                                                    ["text":"北京PK10", "img":"icon_pk10"]
-                                            ]
-                    ]
-    			]
+                        ]
+        ]
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +86,7 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
 //        //    make.bottom.equalToSuperview().offset(-kBOTTOM_HEIGHT)
 //        //}
 //        
-//        let headerView_H : CGFloat = 200.0
+//        let headerView_H: CGFloat = 200.0
 //        self.collectionView.contentInset = UIEdgeInsetsMake(headerView_H, 0, 0, 0)
 //        self.collectionView.addSubview(self.headerView)
 //        self.headerView.frame = CGRect(x: 0, y: -(headerView_H), width: self.collectionView.bounds.size.width, height: headerView_H)

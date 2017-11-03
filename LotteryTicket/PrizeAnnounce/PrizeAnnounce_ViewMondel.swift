@@ -10,7 +10,6 @@ import Foundation
 
 class PrizeAnnounce_ViewModel {
     
-    //var model: PrizeAnnounce_Model?
     var arrModels = [PrizeAnnounce_Model]()
     
     func getData() {
@@ -32,8 +31,7 @@ class PrizeAnnounce_ViewModel {
                         ["text":"排列5", "img":"icon_pl5"],
                         ["text":"极速飞车", "img":"icon_pk10"],
                         ["text":"北京PK10", "img":"icon_pk10"],
-                        ["text":"极速六合彩", "img":"icon_lhc"]
-                    ]
+                        ["text":"极速六合彩", "img":"icon_lhc"] ]
         for dictItem in arrData {
             let model = PrizeAnnounce_Model()
             model.iconImgName = dictItem["img"]
