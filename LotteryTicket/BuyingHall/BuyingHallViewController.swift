@@ -23,14 +23,14 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
         tableview.backgroundColor = UIColor.white
         tableview.dataSource = self
         tableview.delegate = self
-        tableview.register(bhTableCell.classForCoder(), forCellReuseIdentifier: "CellId")
+        tableview.register(BuyingHall_TableCell.classForCoder(), forCellReuseIdentifier: "CellId")
         tableview.separatorStyle = .none
         return tableview
     } ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "卡司秀彩票"
+        self.navigationItem.title = "卡司秀彩票"
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(self.selectBtnsView)
         self.selectBtnsView.snp.makeConstraints { (make) in
@@ -63,11 +63,11 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return bhTableCell.bhHeight
+        return BuyingHall_TableCell.bhHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! bhTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! BuyingHall_TableCell
         let model = self.vm.arrModels[indexPath.row]
         cell.imgviewIcon.image = UIImage(named: model.iconImgName!)
         cell.lbName.text = model.name!
@@ -75,7 +75,7 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
         //cell.lbTime.text = cell.timeConvert(model.time_int!)
         cell.startTimer(model)
         cell.delegate = self
-        cell.cPrizeDetail = { [weak self] (_ cell: bhTableCell) -> () in
+        cell.cPrizeDetail = { [weak self] (_ cell: BuyingHall_TableCell) -> () in
             let vc = WebViewController()
             vc.title = cell.lbName.text! + "奖金详情"
             vc.url_str = "https://www.baidu.com"
@@ -86,8 +86,9 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //let cell = tableView.cellForRow(at: indexPath)
+        let cell = tableView.cellForRow(at: indexPath) as! BuyingHall_TableCell
         let vc = BuyingDetailViewController()
+        vc.detailId = cell.lbName.text!
         self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -96,7 +97,7 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
         //self.bhTableview.reloadData()
         for i in 0..<self.vm.arrModels.count {
             let indexPath = IndexPath(row: i, section: 0)
-            let cell = self.bhTableview.cellForRow(at: indexPath) as! bhTableCell
+            let cell = self.bhTableview.cellForRow(at: indexPath) as! BuyingHall_TableCell
             cell.stopTimer()
         }
     }
@@ -107,8 +108,8 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
 }
 
 
-extension BuyingHallViewController: bhTableCellDelegate {
-    func dNumberTrend(_ cell: bhTableCell) {
+extension BuyingHallViewController: BuyingHall_TableCell_Delegate {
+    func dNumberTrend(_ cell: BuyingHall_TableCell) {
         let vc = WebViewController()
         vc.title = cell.lbName.text! + "走势图"
         vc.url_str = "http://magent.serverddc.com/"

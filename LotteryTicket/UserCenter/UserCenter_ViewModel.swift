@@ -6,16 +6,14 @@
 //  Copyright © 2017年 李诚. All rights reserved.
 //
 
-import Foundation
 
 class UserCenter_ViewModel {
     
-    //var arrCellModel: Array<UserCenter_Cell_Model>?
     var arrCellModel = [UserCenter_Cell_Model]()
     
     private let arrCellData = [ ["img":"userHeader", "text":"公告信息"],
-                                ["img":"userHeader", "text":"投注记录"],
-                                ["img":"userHeader", "text":"交易记录"] ]
+                                ["img":"icon_3d", "text":"投注记录"],
+                                ["img":"banner", "text":"交易记录"] ]
     
     func getCellData() {
         self.arrCellModel.removeAll()

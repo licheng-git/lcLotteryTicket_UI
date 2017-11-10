@@ -18,13 +18,12 @@ class UserCenterViewController: UIViewController, UITableViewDelegate, UITableVi
     } ()
     
     lazy var ucTableview: UITableView = {
-        //let tableview = UITableView(frame: CGRect.zero, style: .plain)
         let tableview = UITableView()
         tableview.backgroundColor = kBgColorGray
         tableview.dataSource = self
         tableview.delegate = self
-        tableview.register(ucTableCell.classForCoder(), forCellReuseIdentifier: "CellId")
-        //tableview.separatorStyle = .none
+        tableview.register(UserCenter_TableCell.classForCoder(), forCellReuseIdentifier: "CellId")
+        //tableview.separatorStyle = .singleLine
         return tableview
     } ()
     
@@ -47,7 +46,7 @@ class UserCenterViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         self.vm.getCellData()
-        self.vm.getHeaderData { [weak self] (model) in
+        self.vm.getHeaderData() { [weak self] (model) in
             self?.headerView.imgviewHeader.image = UIImage(named: model.headerImgName!)
             self?.headerView.lbAccount.text = model.account
             self?.headerView.lbAmount.text = model.amount
@@ -57,7 +56,7 @@ class UserCenterViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let allCellsHeight = ucTableCell.ucHeight * CGFloat(self.vm.arrCellModel.count)
+        let allCellsHeight = UserCenter_TableCell.ucHeight * CGFloat(self.vm.arrCellModel.count)
         let screenLeftHeight = kSCREEN_HEIGHT - self.ucTableview.frame.minY - kBOTTOM_HEIGHT
         if allCellsHeight < screenLeftHeight {
             self.ucTableview.isScrollEnabled = false
@@ -73,35 +72,58 @@ class UserCenterViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ucTableCell.ucHeight
+        return UserCenter_TableCell.ucHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! ucTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! UserCenter_TableCell
         let cm = self.vm.arrCellModel[indexPath.row]
         cell.imgviewIcon.image = UIImage(named: cm.iconImgName!)
         cell.lbText.text = cm.text
         return cell
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
+//        let cm = self.vm.arrCellModel[indexPath.row]
+//        cell.imageView?.image = UIImage(named: cm.iconImgName!)  // 只能是图片本身大小
+//        cell.textLabel?.text = cm.text
+//        cell.accessoryType = .disclosureIndicator
+//        cell.layer.borderColor = UIColor.lightGray.cgColor
+//        cell.layer.borderWidth = 0.5
+//        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         //let cell = tableView.cellForRow(at: indexPath)
+        var vc: UIViewController?
+        if indexPath.row == 0 {
+            vc = AnnounceInforViewController()
+        }
+        else if indexPath.row == 1 {
+            vc = BettingRecordsViewController()
+        }
+        else if indexPath.row == 2 {
+            vc = DealRecordsViewController()
+        }
+        else {
+            return
+        }
+        self.tabBarController?.navigationController?.pushViewController(vc!, animated: true)
     }
     
-    // tableview 上下边框线
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = UIColor.lightGray
-        return view
-    }
+    // tableview 上边框线
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 1
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.lightGray
+        return view
+    }
+    // tableview 下边框线  (底部数据不会动态增加时可以这样搞)
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = UIColor.lightGray
         return view

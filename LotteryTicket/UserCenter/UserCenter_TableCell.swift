@@ -1,24 +1,24 @@
 //
-//  paTableCell.swift
+//  UserCenter_TableCell.swift
 //  LotteryTicket
 //
-//  Created by Cheng Li on 2017/11/2.
+//  Created by Cheng Li on 2017/11/3.
 //  Copyright © 2017年 李诚. All rights reserved.
 //
 
 import UIKit
 import SnapKit
 
-class paTableCell: UITableViewCell {
+class UserCenter_TableCell: UITableViewCell {
     
-    static let paHeight: CGFloat = 70
+    static let ucHeight: CGFloat = 50
     
     let imgviewIcon: UIImageView = {
         let imgview = UIImageView()
         return imgview
     } ()
     
-    let lbName: UILabel = {
+    let lbText: UILabel = {
         let lb = UILabel()
         lb.textAlignment = .left
         lb.font = UIFont.systemFont(ofSize: 16)
@@ -33,11 +33,11 @@ class paTableCell: UITableViewCell {
         self.imgviewIcon.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)
             make.centerY.equalToSuperview()
-            make.width.height.equalTo(40)
+            make.width.height.equalTo(20)
         }
         
-        self.addSubview(self.lbName)
-        self.lbName.snp.makeConstraints { (make) in
+        self.addSubview(self.lbText)
+        self.lbText.snp.makeConstraints { (make) in
             make.left.equalTo(self.imgviewIcon.snp.right).offset(10)
             make.centerY.equalToSuperview()
             make.height.equalTo(21)
@@ -46,21 +46,12 @@ class paTableCell: UITableViewCell {
         
         let imgviewArrow = UIImageView()
         imgviewArrow.image = UIImage(named: "arrow_right")
-        imgviewArrow.backgroundColor = UIColor.lightGray
         self.addSubview(imgviewArrow)
         imgviewArrow.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-10)
             make.centerY.equalToSuperview()
-            make.width.height.equalTo(20)
-        }
-        
-        let lineView = UIView()
-        lineView.backgroundColor = UIColor.lightGray
-        self.addSubview(lineView)
-        lineView.snp.makeConstraints { (make) in
-            make.height.equalTo(1)
-            make.top.equalToSuperview().offset(1)
-            make.left.right.equalToSuperview()
+            make.width.equalTo(10)
+            make.height.equalTo(18)
         }
     }
     
@@ -69,3 +60,4 @@ class paTableCell: UITableViewCell {
     }
     
 }
+

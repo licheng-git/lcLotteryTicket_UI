@@ -6,7 +6,6 @@
 //  Copyright © 2017年 李诚. All rights reserved.
 //
 
-import Foundation
 
 class BuyingHall_Model: NSObject {
     var iconImgName: String?

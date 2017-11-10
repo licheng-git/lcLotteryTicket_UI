@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+//import MJRefresh
 
 class BaseTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -17,10 +18,14 @@ class BaseTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableview.backgroundColor = UIColor.white
         tableview.dataSource = self
         tableview.delegate = self
-        tableview.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "CellId")    // tableview.register(myTableCell.classForCoder(), forCellReuseIdentifier: "CellId")
+        //let cellXib = UINib.init(nibName: "myTableCell", bundle: Bundle.main)
+        //collectionView.register(cellXib, forCellWithReuseIdentifier: "CellId")
+        tableview.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "CellId")    // tableview.register(myTableCell.self, forCellReuseIdentifier: "CellId")
         tableview.separatorStyle = .none
         return tableview
     } ()
+    
+    var currentPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +36,30 @@ class BaseTableViewController: UIViewController, UITableViewDataSource, UITableV
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview().offset(-kBOTTOM_HEIGHT)
         }
+        
+//        self.myTableview.mj_header = MJRefreshNormalHeader(refreshingBlock: { [weak self] in
+//            self?.currentPage = 0
+//            self?.vm.getData((self?.currentPage)!, {(arrModels_page) in
+//                self?.myTableview.reloadData()
+//                self?.myTableview.mj_header.endRefreshing()
+//                self?.myTableview.mj_footer.resetNoMoreData()
+//                if arrModels_page.count < 10 {
+//                    self?.myTableview.mj_footer.endRefreshingWithNoMoreData()
+//                }
+//            })
+//        })
+//        self.myTableview.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { [weak self] in
+//            self?.currentPage += 1
+//            //print("currentPage = \((self?.currentPage)!)")
+//            self?.vm.getData((self?.currentPage)!) { (arrModels_page) in
+//                self?.myTableview.reloadData()
+//                self?.myTableview.mj_footer.endRefreshing()
+//                if arrModels_page.count < 10 {
+//                    self?.myTableview.mj_footer.endRefreshingWithNoMoreData()
+//                }
+//            }
+//        })
+//        self.myTableview.mj_header.beginRefreshing()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,6 +76,12 @@ class BaseTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)    // as! myTableCell
+        //if indexPath.row == 0 {
+        //    cell.lineView_FristCell_Top.isHidden = false
+        //}
+        //else {
+        //    cell.lineView_FristCell_Top.isHidden = true
+        //}
         return cell
     }
     
@@ -54,6 +89,5 @@ class BaseTableViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         //let cell = tableView.cellForRow(at: indexPath)
     }
-
+    
 }
-

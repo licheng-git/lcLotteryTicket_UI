@@ -50,11 +50,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        //MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
+        MBProgressHUD.hide(for: UIApplication.shared.keyWindow!, animated: true)
         let hud = MBProgressHUD.showAdded(to: UIApplication.shared.keyWindow!, animated: true)
         hud.mode = .text
-        hud.label.text = error.localizedDescription
-        hud.hide(animated: true, afterDelay: 5.0)
+        hud.label.text = "网页加载失败"
+        hud.hide(animated: true, afterDelay: 3.0)
     }
     
     

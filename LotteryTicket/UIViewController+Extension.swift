@@ -16,12 +16,12 @@ extension UIViewController {
         navItem_left.image = UIImage(named: "navItem_back")
         //navItem_left.title = "返回"  // 图片和文字二选一 ，若同时需自定义 UIBarButtonItem(customView: )
         navItem_left.target = self
-        navItem_left.action = #selector(self.navItemBackClick(_:))
+        navItem_left.action = #selector(self.navItemClick_Back(_:))
         navItem_left.tintColor = UIColor.white
         self.navigationItem.leftBarButtonItem = navItem_left
     }
     
-    @objc private func navItemBackClick(_ sender: UIBarButtonItem) {
+    @objc private func navItemClick_Back(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
     }
     

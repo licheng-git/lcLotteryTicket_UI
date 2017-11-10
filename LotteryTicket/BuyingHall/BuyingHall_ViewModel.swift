@@ -6,17 +6,15 @@
 //  Copyright © 2017年 李诚. All rights reserved.
 //
 
-import Foundation
 
 class BuyingHall_ViewModel {
     
-    var arrModels = [BuyingHall_Model]()
+    var arrModels = Array<BuyingHall_Model>()
     
-    //func getData(_ selectType: Int) {
-    func getData(_ selectType: Int, _ cComplete:((_ model:Array<BuyingHall_Model>)->())?) {
+    func getData(_ selectType: Int, _ cComplete:((_ arrModels:[BuyingHall_Model])->Void)?) {
         self.arrModels.removeAll()
         var arrData = [Any]()
-        if selectType == 0 {  // 热门彩种
+        if selectType == 0 {
             arrData = [ ["img":"icon_ssc", "name":"极速时时彩", "description":"距离1711010970期截止还有", "time":"0" ],
                         ["img":"icon_11x5", "name":"好运11选5", "description":"距离1711010971期截止还有", "time":"10" ],
                         ["img":"icon_k3", "name":"极速快三", "description":"距离1711010972期截止还有", "time":"80" ],

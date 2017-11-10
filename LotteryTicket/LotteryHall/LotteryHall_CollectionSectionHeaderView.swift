@@ -1,5 +1,5 @@
 //
-//  lhCollectionSectionHeaderView.swift
+//  LotteryHall_CollectionSectionHeaderView.swift
 //  LotteryTicket
 //
 //  Created by 李诚 on 17/10/25.
@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class lhCollectionSectionHeaderView: UICollectionReusableView {
+class LotteryHall_CollectionSectionHeaderView: UICollectionReusableView {
     
     let lbName: UILabel = {
         let lb = UILabel()

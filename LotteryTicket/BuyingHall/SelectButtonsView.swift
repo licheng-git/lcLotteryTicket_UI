@@ -19,7 +19,7 @@ class SelectButtonsView: UIScrollView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = kBgColorGray
-        //print("SelectButtonsView init frame=\(frame)")
+        //print("SelectButtonsView init frame=\(frame)")  // .zero
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,12 +28,12 @@ class SelectButtonsView: UIScrollView {
     
 //    override func didMoveToSuperview() {
 //        super.didMoveToSuperview()
-//        //print("SelectButtonsView didMoveToSuperview frame=\(self.frame)")
+//        //print("SelectButtonsView didMoveToSuperview frame=\(self.frame)")  // .zero
 //    }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        //print("SelectButtonsView draw frame=\(rect)")
+        //print("SelectButtonsView draw frame=\(rect)")  // has correct value
         let btnW: CGFloat = 80
         var btnX: CGFloat = 0
         var btnDefault: UIButton?
@@ -71,6 +71,17 @@ class SelectButtonsView: UIScrollView {
         }
         sender.isSelected = true
         sender.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        
+        //self.setContentOffset(CGPoint(x: sender.frame.minX, y: 0), animated: true)
+        var offsetX = sender.center.x - self.bounds.width/2
+        if offsetX < 0 {
+            offsetX = 0
+        }
+        else if offsetX > self.contentSize.width - self.bounds.width {
+            offsetX = self.contentSize.width - self.bounds.width
+        }
+        self.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+        
         if self.cBtnClick != nil {
             self.cBtnClick!(sender.tag)
         }

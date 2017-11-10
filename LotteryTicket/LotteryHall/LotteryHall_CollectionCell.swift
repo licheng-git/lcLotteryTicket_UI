@@ -1,5 +1,5 @@
 //
-//  lhCollectionViewCell.swift
+//  LotteryHall_CollectionViewCell.swift
 //  LotteryTicket
 //
 //  Created by 李诚 on 17/10/25.
@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class lhCollectionCell: UICollectionViewCell {
+class LotteryHall_CollectionCell: UICollectionViewCell {
     
     let imgviewIcon: UIImageView = {
         let imgview = UIImageView()

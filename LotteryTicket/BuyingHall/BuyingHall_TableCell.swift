@@ -1,5 +1,5 @@
 //
-//  bhTableCell.swift
+//  BuyingHall_TableCell.swift
 //  LotteryTicket
 //
 //  Created by Cheng Li on 2017/11/1.
@@ -10,19 +10,19 @@ import UIKit
 import SnapKit
 
 
-protocol bhTableCellDelegate: class {
-    func dNumberTrend(_ cell: bhTableCell)
-    //func dPrizeDetial(_ cell: bhTableCell)
+protocol BuyingHall_TableCell_Delegate: class {
+    func dNumberTrend(_ cell: BuyingHall_TableCell)
+    //func dPrizeDetial(_ cell: BuyingHall_TableCell)
 }
 
 
-class bhTableCell: UITableViewCell {
+class BuyingHall_TableCell: UITableViewCell {
     
     static let bhHeight: CGFloat = 100
     
-    weak var delegate: bhTableCellDelegate?
-    //var cNumberTrend: ((_ cell: bhTableCell)->())?
-    var cPrizeDetail: ((_ cell: bhTableCell)->Void)?
+    weak var delegate: BuyingHall_TableCell_Delegate?
+    //var cNumberTrend: ((_ cell: BuyingHall_TableCell)->())?
+    var cPrizeDetail: ((_ cell: BuyingHall_TableCell)->Void)?
     
     let imgviewIcon: UIImageView = {
         let imgview = UIImageView()
@@ -80,12 +80,12 @@ class bhTableCell: UITableViewCell {
         
         let imgviewArrow = UIImageView()
         imgviewArrow.image = UIImage(named: "arrow_right")
-        imgviewArrow.backgroundColor = UIColor.lightGray
         self.addSubview(imgviewArrow)
         imgviewArrow.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-5)
             make.centerY.equalTo(self.imgviewIcon)
-            make.width.height.equalTo(20)
+            make.width.equalTo(10)
+            make.height.equalTo(18)
         }
         
         self.addSubview(self.lbTime)
@@ -110,7 +110,7 @@ class bhTableCell: UITableViewCell {
         btn0.setTitle("号码走势", for: .normal)
         btn0.setTitleColor(UIColor.darkText, for: .normal)
         btn0.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        //btn0.setImage(UIImage(named: ""), for: .normal)
+        btn0.setImage(UIImage(named: "icon_3d"), for: .normal)
         btn0.addTarget(self, action: #selector(btnClick(_:)), for: .touchUpInside)
         btn0.tag = 10
         self.addSubview(btn0)
@@ -125,7 +125,7 @@ class bhTableCell: UITableViewCell {
         btn1.setTitle("奖金详情", for: .normal)
         btn1.setTitleColor(UIColor.darkText, for: .normal)
         btn1.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        //btn1.setImage(UIImage(named: ""), for: .normal)
+        btn1.setImage(UIImage(named: "btn_arrow_down"), for: .normal)
         btn1.addTarget(self, action: #selector(btnClick(_:)), for: .touchUpInside)
         btn1.tag = 11
         self.addSubview(btn1)

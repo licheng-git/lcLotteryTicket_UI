@@ -20,10 +20,8 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = UIColor.white
-        //let cellXib = UINib.init(nibName: "lhCollectionCell", bundle: Bundle.main)
-        //collectionView.register(cellXib, forCellWithReuseIdentifier: "Cell")
-        collectionView.register(lhCollectionCell.classForCoder(), forCellWithReuseIdentifier: "Cell")
-        collectionView.register(lhCollectionSectionHeaderView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "SectionHeader")
+        collectionView.register(LotteryHall_CollectionCell.classForCoder(), forCellWithReuseIdentifier: "Cell")
+        collectionView.register(LotteryHall_CollectionSectionHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "SectionHeader")
         return collectionView
     } ()
     
@@ -32,9 +30,14 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
         return view
     } ()
     
-    lazy var bannerView: BannerView = {
-        let view = BannerView()
-        return view
+//    lazy var bannerView: BannerView = {
+//        let view = BannerView()
+//        return view
+//    } ()
+    lazy var bannerView: UIImageView = {
+        let imgview = UIImageView()
+        imgview.image = UIImage(named: "banner")
+        return imgview
     } ()
     
     lazy var runningTipView: RunningTipView = {
@@ -74,7 +77,7 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "卡司秀彩票"
+        self.navigationItem.title = "卡司秀彩票"
         
 //        // 滚动headerView
 //        self.automaticallyAdjustsScrollViewInsets = false
@@ -161,7 +164,7 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellIdentifier = "Cell"
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! lhCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! LotteryHall_CollectionCell
         let arrItems = self.arrData[indexPath.section]["items"] as! [Any]
         let dictItem = arrItems[indexPath.row] as! [String:String]
         cell.lbName.text = dictItem["text"]
@@ -170,8 +173,9 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let cell = collectionView.cellForItem(at: indexPath)
+        let cell = collectionView.cellForItem(at: indexPath) as! LotteryHall_CollectionCell
         let vc = BuyingDetailViewController()
+        vc.detailId = cell.lbName.text!
         self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -181,7 +185,7 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerIdentifier = "SectionHeader"
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, for: indexPath) as! lhCollectionSectionHeaderView
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, for: indexPath) as! LotteryHall_CollectionSectionHeaderView
         header.lbName.text = self.arrData[indexPath.section]["name"] as? String
         return header
     }

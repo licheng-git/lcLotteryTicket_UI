@@ -14,12 +14,11 @@ class PrizeAnnounceViewController: UIViewController, UITableViewDelegate, UITabl
     let vm = PrizeAnnounce_ViewModel()
     
     lazy var paTableview: UITableView = {
-        //let tableview = UITableView(frame: CGRect.zero, style: .plain)
         let tableview = UITableView()
         tableview.backgroundColor = UIColor.white
         tableview.dataSource = self
         tableview.delegate = self
-        tableview.register(paTableCell.classForCoder(), forCellReuseIdentifier: "CellId")
+        tableview.register(PrizeAnnounce_TableCell.classForCoder(), forCellReuseIdentifier: "CellId")
         tableview.separatorStyle = .none
         return tableview
     } ()
@@ -46,11 +45,11 @@ class PrizeAnnounceViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return paTableCell.paHeight
+        return PrizeAnnounce_TableCell.paHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! paTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath) as! PrizeAnnounce_TableCell
         let model = self.vm.arrModels[indexPath.row]
         cell.imgviewIcon.image = UIImage(named: model.iconImgName!)
         cell.lbName.text = model.name!
@@ -62,6 +61,16 @@ class PrizeAnnounceViewController: UIViewController, UITableViewDelegate, UITabl
         //let cell = tableView.cellForRow(at: indexPath)
         let vc = PrizeResultViewController()
         self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // tableview 上边框线
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = UIColor.lightGray
+        return view
     }
 
 }

@@ -10,17 +10,19 @@
 		5A0F16EE1FAB3418004C3415 /* PrizeResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F16ED1FAB3418004C3415 /* PrizeResultViewController.swift */; };
 		5A1504001FA190BD000FCB58 /* MainTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1503FF1FA190BD000FCB58 /* MainTabbarViewController.swift */; };
 		5A1504061FA19A81000FCB58 /* LotteryHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1504051FA19A81000FCB58 /* LotteryHallViewController.swift */; };
-		5A1504091FA19D35000FCB58 /* lhCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1504071FA19D35000FCB58 /* lhCollectionCell.swift */; };
-		5A15040A1FA19D35000FCB58 /* lhCollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1504081FA19D35000FCB58 /* lhCollectionSectionHeaderView.swift */; };
+		5A1504091FA19D35000FCB58 /* LotteryHall_CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1504071FA19D35000FCB58 /* LotteryHall_CollectionCell.swift */; };
+		5A15040A1FA19D35000FCB58 /* LotteryHall_CollectionSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1504081FA19D35000FCB58 /* LotteryHall_CollectionSectionHeaderView.swift */; };
 		5A15040D1FA1B422000FCB58 /* BuyingHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15040C1FA1B422000FCB58 /* BuyingHallViewController.swift */; };
 		5A15040F1FA1B482000FCB58 /* PrizeAnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15040E1FA1B482000FCB58 /* PrizeAnnounceViewController.swift */; };
 		5A1504111FA1B4A2000FCB58 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1504101FA1B4A2000FCB58 /* UserCenterViewController.swift */; };
-		5A1505E91FA96D2B00F5A8C0 /* bhTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1505E81FA96D2B00F5A8C0 /* bhTableCell.swift */; };
+		5A1505E91FA96D2B00F5A8C0 /* BuyingHall_TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1505E81FA96D2B00F5A8C0 /* BuyingHall_TableCell.swift */; };
 		5A32BB991FAC09030056EA76 /* ucHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB981FAC09030056EA76 /* ucHeaderView.swift */; };
 		5A32BB9B1FAC14460056EA76 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB9A1FAC14460056EA76 /* BaseTableViewController.swift */; };
-		5A32BB9D1FAC18F80056EA76 /* ucTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB9C1FAC18F80056EA76 /* ucTableCell.swift */; };
+		5A32BB9D1FAC18F80056EA76 /* UserCenter_TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB9C1FAC18F80056EA76 /* UserCenter_TableCell.swift */; };
 		5A32BB9F1FAC1B440056EA76 /* UserCenter_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BB9E1FAC1B440056EA76 /* UserCenter_Model.swift */; };
 		5A32BBA11FAC1B5C0056EA76 /* UserCenter_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32BBA01FAC1B5C0056EA76 /* UserCenter_ViewModel.swift */; };
+		5A3920811FB03761006CE9F4 /* bdNavTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3920801FB03761006CE9F4 /* bdNavTitleView.swift */; };
+		5A3A61611FB04F84005CC5B0 /* bdNavTitleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A61601FB04F84005CC5B0 /* bdNavTitleDetailView.swift */; };
 		5A45664C1FA72DEF008971AE /* RunningTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A45664B1FA72DEF008971AE /* RunningTipView.swift */; };
 		5A45664E1FA73380008971AE /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A45664D1FA73380008971AE /* AccountView.swift */; };
 		5A8BB3981FA3415B007A5397 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8BB3971FA3415B007A5397 /* Constants.swift */; };
@@ -28,9 +30,18 @@
 		5A8C10011FA9B490001A2BC8 /* BuyingHall_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C10001FA9B490001A2BC8 /* BuyingHall_ViewModel.swift */; };
 		5A8C10031FA9D184001A2BC8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C10021FA9D184001A2BC8 /* WebViewController.swift */; };
 		5A8C10051FA9E0B5001A2BC8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C10041FA9E0B5001A2BC8 /* UIViewController+Extension.swift */; };
+		5ABEA20A1FB40B0E00C70336 /* DealRecords_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABEA2091FB40B0E00C70336 /* DealRecords_ViewModel.swift */; };
+		5ABEA20C1FB40E2800C70336 /* DealRecords_TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABEA20B1FB40E2800C70336 /* DealRecords_TableCell.swift */; };
+		5AC57B171FB150EE00349525 /* bdNavTitleDetailView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC57B161FB150EE00349525 /* bdNavTitleDetailView1.swift */; };
 		5AC730CC1FAABDD000CE245E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC730CB1FAABDD000CE245E /* BaseViewController.swift */; };
 		5AC730D11FAB012500CE245E /* SelectButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC730D01FAB012500CE245E /* SelectButtonsView.swift */; };
 		5AC7E5471FA31EDE0062A447 /* ocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7E5461FA31EDE0062A447 /* ocViewController.m */; };
+		5ACBF71D1FB4546200ADB6E9 /* BettingDetail_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBF7171FB4546200ADB6E9 /* BettingDetail_ViewModel.swift */; };
+		5ACBF71F1FB4546200ADB6E9 /* BettingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBF7191FB4546200ADB6E9 /* BettingDetailViewController.swift */; };
+		5ACBF7201FB4546200ADB6E9 /* BettingRecords_TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBF71A1FB4546200ADB6E9 /* BettingRecords_TableCell.swift */; };
+		5ACBF7211FB4546200ADB6E9 /* BettingRecords_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBF71B1FB4546200ADB6E9 /* BettingRecords_ViewModel.swift */; };
+		5ACBF7221FB4546200ADB6E9 /* BettingRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBF71C1FB4546200ADB6E9 /* BettingRecordsViewController.swift */; };
+		5ACBF7241FB45C2E00ADB6E9 /* BettingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACBF7231FB45C2D00ADB6E9 /* BettingDetailViewController.xib */; };
 		5AD93A9B1FA8298E007FDED5 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD93A9A1FA8298E007FDED5 /* BannerView.swift */; };
 		5AD93A9D1FA85D1D007FDED5 /* AccountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD93A9C1FA85D1D007FDED5 /* AccountView.xib */; };
 		5AD93AA41FA88275007FDED5 /* BuyingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD93AA31FA88275007FDED5 /* BuyingDetailViewController.swift */; };
@@ -39,7 +50,12 @@
 		5AE4F4591FA043AE007BD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE4F4571FA043AE007BD714 /* Main.storyboard */; };
 		5AE4F45B1FA043AE007BD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE4F45A1FA043AE007BD714 /* Assets.xcassets */; };
 		5AE4F45E1FA043AE007BD714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE4F45C1FA043AE007BD714 /* LaunchScreen.storyboard */; };
-		5AF2E59B1FAB256D00908E3C /* paTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2E59A1FAB256D00908E3C /* paTableCell.swift */; };
+		5AF1B4991FB2A548001A4269 /* PrizeResult_TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1B4981FB2A548001A4269 /* PrizeResult_TableCell.swift */; };
+		5AF1B49B1FB2A6C3001A4269 /* PrizeResult_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1B49A1FB2A6C3001A4269 /* PrizeResult_Model.swift */; };
+		5AF1B49D1FB2A6D5001A4269 /* PrizeResult_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1B49C1FB2A6D5001A4269 /* PrizeResult_ViewModel.swift */; };
+		5AF1B4A21FB30A14001A4269 /* AnnounceInforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1B4A11FB30A14001A4269 /* AnnounceInforViewController.swift */; };
+		5AF1B4A61FB30A8F001A4269 /* DealRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF1B4A51FB30A8F001A4269 /* DealRecordsViewController.swift */; };
+		5AF2E59B1FAB256D00908E3C /* PrizeAnnounce_TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2E59A1FAB256D00908E3C /* PrizeAnnounce_TableCell.swift */; };
 		5AF2E59D1FAB288300908E3C /* PrizeAnnounce_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2E59C1FAB288300908E3C /* PrizeAnnounce_Model.swift */; };
 		5AF2E59F1FAB289700908E3C /* PrizeAnnounce_ViewMondel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2E59E1FAB289700908E3C /* PrizeAnnounce_ViewMondel.swift */; };
 		663431690B41B6E3ADC28E38 /* Pods_LotteryTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CF5632838DB19011E857DD /* Pods_LotteryTicket.framework */; };
@@ -51,17 +67,19 @@
 		5A0F16ED1FAB3418004C3415 /* PrizeResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeResultViewController.swift; sourceTree = "<group>"; };
 		5A1503FF1FA190BD000FCB58 /* MainTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabbarViewController.swift; sourceTree = "<group>"; };
 		5A1504051FA19A81000FCB58 /* LotteryHallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryHallViewController.swift; sourceTree = "<group>"; };
-		5A1504071FA19D35000FCB58 /* lhCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lhCollectionCell.swift; sourceTree = "<group>"; };
-		5A1504081FA19D35000FCB58 /* lhCollectionSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lhCollectionSectionHeaderView.swift; sourceTree = "<group>"; };
+		5A1504071FA19D35000FCB58 /* LotteryHall_CollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryHall_CollectionCell.swift; sourceTree = "<group>"; };
+		5A1504081FA19D35000FCB58 /* LotteryHall_CollectionSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotteryHall_CollectionSectionHeaderView.swift; sourceTree = "<group>"; };
 		5A15040C1FA1B422000FCB58 /* BuyingHallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyingHallViewController.swift; sourceTree = "<group>"; };
 		5A15040E1FA1B482000FCB58 /* PrizeAnnounceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeAnnounceViewController.swift; sourceTree = "<group>"; };
 		5A1504101FA1B4A2000FCB58 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterViewController.swift; sourceTree = "<group>"; };
-		5A1505E81FA96D2B00F5A8C0 /* bhTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bhTableCell.swift; sourceTree = "<group>"; };
+		5A1505E81FA96D2B00F5A8C0 /* BuyingHall_TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHall_TableCell.swift; sourceTree = "<group>"; };
 		5A32BB981FAC09030056EA76 /* ucHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ucHeaderView.swift; sourceTree = "<group>"; };
 		5A32BB9A1FAC14460056EA76 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		5A32BB9C1FAC18F80056EA76 /* ucTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ucTableCell.swift; sourceTree = "<group>"; };
+		5A32BB9C1FAC18F80056EA76 /* UserCenter_TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter_TableCell.swift; sourceTree = "<group>"; };
 		5A32BB9E1FAC1B440056EA76 /* UserCenter_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter_Model.swift; sourceTree = "<group>"; };
 		5A32BBA01FAC1B5C0056EA76 /* UserCenter_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenter_ViewModel.swift; sourceTree = "<group>"; };
+		5A3920801FB03761006CE9F4 /* bdNavTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bdNavTitleView.swift; sourceTree = "<group>"; };
+		5A3A61601FB04F84005CC5B0 /* bdNavTitleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bdNavTitleDetailView.swift; sourceTree = "<group>"; };
 		5A45664B1FA72DEF008971AE /* RunningTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningTipView.swift; sourceTree = "<group>"; };
 		5A45664D1FA73380008971AE /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		5A8BB3971FA3415B007A5397 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -69,11 +87,20 @@
 		5A8C10001FA9B490001A2BC8 /* BuyingHall_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingHall_ViewModel.swift; sourceTree = "<group>"; };
 		5A8C10021FA9D184001A2BC8 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5A8C10041FA9E0B5001A2BC8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		5ABEA2091FB40B0E00C70336 /* DealRecords_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealRecords_ViewModel.swift; sourceTree = "<group>"; };
+		5ABEA20B1FB40E2800C70336 /* DealRecords_TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealRecords_TableCell.swift; sourceTree = "<group>"; };
+		5AC57B161FB150EE00349525 /* bdNavTitleDetailView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bdNavTitleDetailView1.swift; sourceTree = "<group>"; };
 		5AC730CB1FAABDD000CE245E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5AC730D01FAB012500CE245E /* SelectButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectButtonsView.swift; sourceTree = "<group>"; };
 		5AC7E5441FA31EDD0062A447 /* LotteryTicket-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LotteryTicket-Bridging-Header.h"; sourceTree = "<group>"; };
 		5AC7E5451FA31EDE0062A447 /* ocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocViewController.h; sourceTree = "<group>"; };
 		5AC7E5461FA31EDE0062A447 /* ocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ocViewController.m; sourceTree = "<group>"; };
+		5ACBF7171FB4546200ADB6E9 /* BettingDetail_ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingDetail_ViewModel.swift; sourceTree = "<group>"; };
+		5ACBF7191FB4546200ADB6E9 /* BettingDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingDetailViewController.swift; sourceTree = "<group>"; };
+		5ACBF71A1FB4546200ADB6E9 /* BettingRecords_TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingRecords_TableCell.swift; sourceTree = "<group>"; };
+		5ACBF71B1FB4546200ADB6E9 /* BettingRecords_ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingRecords_ViewModel.swift; sourceTree = "<group>"; };
+		5ACBF71C1FB4546200ADB6E9 /* BettingRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingRecordsViewController.swift; sourceTree = "<group>"; };
+		5ACBF7231FB45C2D00ADB6E9 /* BettingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BettingDetailViewController.xib; sourceTree = "<group>"; };
 		5AD93A9A1FA8298E007FDED5 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		5AD93A9C1FA85D1D007FDED5 /* AccountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountView.xib; sourceTree = "<group>"; };
 		5AD93AA31FA88275007FDED5 /* BuyingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingDetailViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +111,12 @@
 		5AE4F45A1FA043AE007BD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AE4F45D1FA043AE007BD714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AE4F45F1FA043AE007BD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AF2E59A1FAB256D00908E3C /* paTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paTableCell.swift; sourceTree = "<group>"; };
+		5AF1B4981FB2A548001A4269 /* PrizeResult_TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeResult_TableCell.swift; sourceTree = "<group>"; };
+		5AF1B49A1FB2A6C3001A4269 /* PrizeResult_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeResult_Model.swift; sourceTree = "<group>"; };
+		5AF1B49C1FB2A6D5001A4269 /* PrizeResult_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeResult_ViewModel.swift; sourceTree = "<group>"; };
+		5AF1B4A11FB30A14001A4269 /* AnnounceInforViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceInforViewController.swift; sourceTree = "<group>"; };
+		5AF1B4A51FB30A8F001A4269 /* DealRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealRecordsViewController.swift; sourceTree = "<group>"; };
+		5AF2E59A1FAB256D00908E3C /* PrizeAnnounce_TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeAnnounce_TableCell.swift; sourceTree = "<group>"; };
 		5AF2E59C1FAB288300908E3C /* PrizeAnnounce_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeAnnounce_Model.swift; sourceTree = "<group>"; };
 		5AF2E59E1FAB289700908E3C /* PrizeAnnounce_ViewMondel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeAnnounce_ViewMondel.swift; sourceTree = "<group>"; };
 		814E3A96736064BDB8DF46D1 /* Pods-LotteryTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LotteryTicket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LotteryTicket/Pods-LotteryTicket.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				5A0F16ED1FAB3418004C3415 /* PrizeResultViewController.swift */,
+				5AF1B4981FB2A548001A4269 /* PrizeResult_TableCell.swift */,
+				5AF1B49A1FB2A6C3001A4269 /* PrizeResult_Model.swift */,
+				5AF1B49C1FB2A6D5001A4269 /* PrizeResult_ViewModel.swift */,
 			);
 			path = PrizeAnnounceDetail;
 			sourceTree = "<group>";
@@ -114,8 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				5A1504051FA19A81000FCB58 /* LotteryHallViewController.swift */,
-				5A1504071FA19D35000FCB58 /* lhCollectionCell.swift */,
-				5A1504081FA19D35000FCB58 /* lhCollectionSectionHeaderView.swift */,
+				5A1504071FA19D35000FCB58 /* LotteryHall_CollectionCell.swift */,
+				5A1504081FA19D35000FCB58 /* LotteryHall_CollectionSectionHeaderView.swift */,
 				5AD93A9A1FA8298E007FDED5 /* BannerView.swift */,
 				5A45664B1FA72DEF008971AE /* RunningTipView.swift */,
 				5A45664D1FA73380008971AE /* AccountView.swift */,
@@ -128,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				5A15040E1FA1B482000FCB58 /* PrizeAnnounceViewController.swift */,
-				5AF2E59A1FAB256D00908E3C /* paTableCell.swift */,
+				5AF2E59A1FAB256D00908E3C /* PrizeAnnounce_TableCell.swift */,
 				5AF2E59C1FAB288300908E3C /* PrizeAnnounce_Model.swift */,
 				5AF2E59E1FAB289700908E3C /* PrizeAnnounce_ViewMondel.swift */,
 				5A0F16EC1FAB3070004C3415 /* PrizeAnnounceDetail */,
@@ -141,9 +176,12 @@
 			children = (
 				5A1504101FA1B4A2000FCB58 /* UserCenterViewController.swift */,
 				5A32BB981FAC09030056EA76 /* ucHeaderView.swift */,
-				5A32BB9C1FAC18F80056EA76 /* ucTableCell.swift */,
+				5A32BB9C1FAC18F80056EA76 /* UserCenter_TableCell.swift */,
 				5A32BB9E1FAC1B440056EA76 /* UserCenter_Model.swift */,
 				5A32BBA01FAC1B5C0056EA76 /* UserCenter_ViewModel.swift */,
+				5AF1B49E1FB3097B001A4269 /* AnnounceInfor */,
+				5ACBF7151FB4546200ADB6E9 /* BettingRecords */,
+				5AF1B49F1FB3097B001A4269 /* DealRecords */,
 			);
 			path = UserCenter;
 			sourceTree = "<group>";
@@ -152,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				5A15040C1FA1B422000FCB58 /* BuyingHallViewController.swift */,
-				5A1505E81FA96D2B00F5A8C0 /* bhTableCell.swift */,
+				5A1505E81FA96D2B00F5A8C0 /* BuyingHall_TableCell.swift */,
 				5AC730D01FAB012500CE245E /* SelectButtonsView.swift */,
 				5A8C0FFE1FA9B330001A2BC8 /* BuyingHall_Model.swift */,
 				5A8C10001FA9B490001A2BC8 /* BuyingHall_ViewModel.swift */,
@@ -167,10 +205,34 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
+		5ACBF7151FB4546200ADB6E9 /* BettingRecords */ = {
+			isa = PBXGroup;
+			children = (
+				5ACBF71C1FB4546200ADB6E9 /* BettingRecordsViewController.swift */,
+				5ACBF71A1FB4546200ADB6E9 /* BettingRecords_TableCell.swift */,
+				5ACBF71B1FB4546200ADB6E9 /* BettingRecords_ViewModel.swift */,
+				5ACBF7161FB4546200ADB6E9 /* BettingDetail */,
+			);
+			path = BettingRecords;
+			sourceTree = "<group>";
+		};
+		5ACBF7161FB4546200ADB6E9 /* BettingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5ACBF7191FB4546200ADB6E9 /* BettingDetailViewController.swift */,
+				5ACBF7231FB45C2D00ADB6E9 /* BettingDetailViewController.xib */,
+				5ACBF7171FB4546200ADB6E9 /* BettingDetail_ViewModel.swift */,
+			);
+			path = BettingDetail;
+			sourceTree = "<group>";
+		};
 		5AD93AA21FA88257007FDED5 /* BuyingDetail */ = {
 			isa = PBXGroup;
 			children = (
 				5AD93AA31FA88275007FDED5 /* BuyingDetailViewController.swift */,
+				5A3920801FB03761006CE9F4 /* bdNavTitleView.swift */,
+				5A3A61601FB04F84005CC5B0 /* bdNavTitleDetailView.swift */,
+				5AC57B161FB150EE00349525 /* bdNavTitleDetailView1.swift */,
 			);
 			path = BuyingDetail;
 			sourceTree = "<group>";
@@ -219,6 +281,24 @@
 				5AC7E5441FA31EDD0062A447 /* LotteryTicket-Bridging-Header.h */,
 			);
 			path = LotteryTicket;
+			sourceTree = "<group>";
+		};
+		5AF1B49E1FB3097B001A4269 /* AnnounceInfor */ = {
+			isa = PBXGroup;
+			children = (
+				5AF1B4A11FB30A14001A4269 /* AnnounceInforViewController.swift */,
+			);
+			path = AnnounceInfor;
+			sourceTree = "<group>";
+		};
+		5AF1B49F1FB3097B001A4269 /* DealRecords */ = {
+			isa = PBXGroup;
+			children = (
+				5AF1B4A51FB30A8F001A4269 /* DealRecordsViewController.swift */,
+				5ABEA20B1FB40E2800C70336 /* DealRecords_TableCell.swift */,
+				5ABEA2091FB40B0E00C70336 /* DealRecords_ViewModel.swift */,
+			);
+			path = DealRecords;
 			sourceTree = "<group>";
 		};
 		6259C7DA97A3F74DCBB1CC52 /* Frameworks */ = {
@@ -302,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACBF7241FB45C2E00ADB6E9 /* BettingDetailViewController.xib in Resources */,
 				5AD93A9D1FA85D1D007FDED5 /* AccountView.xib in Resources */,
 				5AE4F45E1FA043AE007BD714 /* LaunchScreen.storyboard in Resources */,
 				5AE4F45B1FA043AE007BD714 /* Assets.xcassets in Resources */,
@@ -352,12 +433,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LotteryTicket/Pods-LotteryTicket-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,37 +457,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACBF7221FB4546200ADB6E9 /* BettingRecordsViewController.swift in Sources */,
 				5AD93A9B1FA8298E007FDED5 /* BannerView.swift in Sources */,
+				5ABEA20C1FB40E2800C70336 /* DealRecords_TableCell.swift in Sources */,
+				5AF1B4A61FB30A8F001A4269 /* DealRecordsViewController.swift in Sources */,
 				5AC7E5471FA31EDE0062A447 /* ocViewController.m in Sources */,
+				5AC57B171FB150EE00349525 /* bdNavTitleDetailView1.swift in Sources */,
 				5A0F16EE1FAB3418004C3415 /* PrizeResultViewController.swift in Sources */,
 				5A8BB3981FA3415B007A5397 /* Constants.swift in Sources */,
 				5A15040D1FA1B422000FCB58 /* BuyingHallViewController.swift in Sources */,
 				5A8C10031FA9D184001A2BC8 /* WebViewController.swift in Sources */,
 				5A32BBA11FAC1B5C0056EA76 /* UserCenter_ViewModel.swift in Sources */,
 				5AF2E59D1FAB288300908E3C /* PrizeAnnounce_Model.swift in Sources */,
-				5A1504091FA19D35000FCB58 /* lhCollectionCell.swift in Sources */,
+				5A1504091FA19D35000FCB58 /* LotteryHall_CollectionCell.swift in Sources */,
 				5A8C0FFF1FA9B330001A2BC8 /* BuyingHall_Model.swift in Sources */,
+				5ACBF7201FB4546200ADB6E9 /* BettingRecords_TableCell.swift in Sources */,
+				5AF1B49B1FB2A6C3001A4269 /* PrizeResult_Model.swift in Sources */,
+				5A3920811FB03761006CE9F4 /* bdNavTitleView.swift in Sources */,
+				5ACBF7211FB4546200ADB6E9 /* BettingRecords_ViewModel.swift in Sources */,
 				5A45664C1FA72DEF008971AE /* RunningTipView.swift in Sources */,
 				5A32BB9B1FAC14460056EA76 /* BaseTableViewController.swift in Sources */,
-				5A15040A1FA19D35000FCB58 /* lhCollectionSectionHeaderView.swift in Sources */,
+				5A15040A1FA19D35000FCB58 /* LotteryHall_CollectionSectionHeaderView.swift in Sources */,
 				5AF2E59F1FAB289700908E3C /* PrizeAnnounce_ViewMondel.swift in Sources */,
 				5AE4F4561FA043AE007BD714 /* ViewController.swift in Sources */,
 				5AE4F4541FA043AE007BD714 /* AppDelegate.swift in Sources */,
+				5ACBF71D1FB4546200ADB6E9 /* BettingDetail_ViewModel.swift in Sources */,
 				5A1504111FA1B4A2000FCB58 /* UserCenterViewController.swift in Sources */,
+				5AF1B4A21FB30A14001A4269 /* AnnounceInforViewController.swift in Sources */,
 				5A8C10051FA9E0B5001A2BC8 /* UIViewController+Extension.swift in Sources */,
 				5AC730CC1FAABDD000CE245E /* BaseViewController.swift in Sources */,
 				5A1504001FA190BD000FCB58 /* MainTabbarViewController.swift in Sources */,
 				5A1504061FA19A81000FCB58 /* LotteryHallViewController.swift in Sources */,
+				5ACBF71F1FB4546200ADB6E9 /* BettingDetailViewController.swift in Sources */,
+				5A3A61611FB04F84005CC5B0 /* bdNavTitleDetailView.swift in Sources */,
 				5AC730D11FAB012500CE245E /* SelectButtonsView.swift in Sources */,
 				5A32BB9F1FAC1B440056EA76 /* UserCenter_Model.swift in Sources */,
 				5A8C10011FA9B490001A2BC8 /* BuyingHall_ViewModel.swift in Sources */,
-				5A1505E91FA96D2B00F5A8C0 /* bhTableCell.swift in Sources */,
-				5AF2E59B1FAB256D00908E3C /* paTableCell.swift in Sources */,
+				5A1505E91FA96D2B00F5A8C0 /* BuyingHall_TableCell.swift in Sources */,
+				5AF1B49D1FB2A6D5001A4269 /* PrizeResult_ViewModel.swift in Sources */,
+				5AF2E59B1FAB256D00908E3C /* PrizeAnnounce_TableCell.swift in Sources */,
 				5A45664E1FA73380008971AE /* AccountView.swift in Sources */,
 				5A32BB991FAC09030056EA76 /* ucHeaderView.swift in Sources */,
-				5A32BB9D1FAC18F80056EA76 /* ucTableCell.swift in Sources */,
+				5A32BB9D1FAC18F80056EA76 /* UserCenter_TableCell.swift in Sources */,
 				5AD93AA41FA88275007FDED5 /* BuyingDetailViewController.swift in Sources */,
 				5A15040F1FA1B482000FCB58 /* PrizeAnnounceViewController.swift in Sources */,
+				5AF1B4991FB2A548001A4269 /* PrizeResult_TableCell.swift in Sources */,
+				5ABEA20A1FB40B0E00C70336 /* DealRecords_ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
