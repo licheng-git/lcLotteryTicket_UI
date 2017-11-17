@@ -24,6 +24,7 @@ import UIKit
 //
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
+//        self.view.backgroundColor = UIColor.white
 //        self.automaticallyAdjustsScrollViewInsets = false
 //        if self.bDefaultBackNavItem {
 //            self.addDefaultBackNavItem()
@@ -41,4 +42,3 @@ import UIKit
 ////    }
 //
 //}
-

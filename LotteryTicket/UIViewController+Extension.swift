@@ -6,8 +6,6 @@
 //  Copyright © 2017年 李诚. All rights reserved.
 //
 
-import Foundation
-
 extension UIViewController {
     
     func addDefaultBackNavItem() {

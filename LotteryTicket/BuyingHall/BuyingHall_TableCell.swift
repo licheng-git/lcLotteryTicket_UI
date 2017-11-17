@@ -164,16 +164,8 @@ class BuyingHall_TableCell: UITableViewCell {
     }
     
     
-    func timeConvert(_ t:Int) -> String {
-        let h:Int = (t/(60*60))%60
-        let m:Int = (t/60)%60
-        let s:Int = t%60
-        let result = String.init(format: "%02d:%02d:%02d", h, m, s)
-        return result
-    }
-    
-    var timer: Timer?
-    var remainSeconds: Int = 0
+    private var timer: Timer?
+    private var remainSeconds: Int = 0
     
     func startTimer(_ model: BuyingHall_Model) {
         self.remainSeconds = model.time_int!
@@ -190,6 +182,14 @@ class BuyingHall_TableCell: UITableViewCell {
         if self.remainSeconds < 0 {
             self.stopTimer()
         }
+    }
+    
+    func timeConvert(_ t:Int) -> String {
+        let h:Int = (t/(60*60))%60
+        let m:Int = (t/60)%60
+        let s:Int = t%60
+        let result = String.init(format: "%02d:%02d:%02d", h, m, s)
+        return result
     }
     
     func stopTimer() {

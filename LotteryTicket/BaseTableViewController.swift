@@ -22,6 +22,7 @@ class BaseTableViewController: UIViewController, UITableViewDataSource, UITableV
         //collectionView.register(cellXib, forCellWithReuseIdentifier: "CellId")
         tableview.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "CellId")    // tableview.register(myTableCell.self, forCellReuseIdentifier: "CellId")
         tableview.separatorStyle = .none
+        //tableview.rowHeight = myTableCell.myHeight  // 固定高度，优先级低于代理方法
         return tableview
     } ()
     
@@ -70,9 +71,9 @@ class BaseTableViewController: UIViewController, UITableViewDataSource, UITableV
         return 0    // return self.vm.arrModels.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 0    // return myTableCell.myHeight
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 0    // return myTableCell.myHeight
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)    // as! myTableCell

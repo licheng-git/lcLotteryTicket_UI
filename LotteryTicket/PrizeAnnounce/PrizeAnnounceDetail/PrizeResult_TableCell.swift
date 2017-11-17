@@ -75,6 +75,8 @@ class PrizeResult_TableCell: UITableViewCell {
                 return
             }
             //print("didSet \(self.strResult!) \(self.bgResultView.frame)")  // .zero
+            //self.layoutIfNeeded()
+            //print("didSet self.layoutIfNeed() \(self.bgResultView.frame)")  // 正常
             for v in self.bgResultView.subviews {
                 v.removeFromSuperview()
             }
@@ -110,8 +112,28 @@ class PrizeResult_TableCell: UITableViewCell {
         }
     }
     
-//    func fSetResult(_ strResult:String?) {
+//    func fSetResult(_ strResult:String) {
 //        //print("func \(self.bgResultView.frame)")  // .zero
+//        self.layoutIfNeeded()
+//        //print("func self.layoutIfNeed() \(self.bgResultView.frame)")  // 正常
+//        for v in self.bgResultView.subviews {
+//            v.removeFromSuperview()
+//        }
+//        let arrChars = Array(strResult)
+//        let w: CGFloat = 25
+//        let y: CGFloat = (self.bgResultView.frame.height - w) / 2
+//        for i in 0..<arrChars.count {
+//            let c = arrChars[i]
+//            let strC = String(c)
+//            let btn = UIButton()
+//            btn.isEnabled = false
+//            btn.setTitle(strC, for: .normal)
+//            btn.setTitleColor(UIColor.white, for: .normal)
+//            btn.backgroundColor = UIColor.red
+//            self.bgResultView.addSubview(btn)
+//            btn.frame = CGRect(x: (w+5)*CGFloat(i), y: y, width: w, height: w)
+//            btn.layer.cornerRadius = w/2
+//        }
 //    }
     
 }

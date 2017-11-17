@@ -19,21 +19,14 @@ class SelectButtonsView: UIScrollView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = kBgColorGray
-        //print("SelectButtonsView init frame=\(frame)")  // .zero
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    override func didMoveToSuperview() {
-//        super.didMoveToSuperview()
-//        //print("SelectButtonsView didMoveToSuperview frame=\(self.frame)")  // .zero
-//    }
-    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        //print("SelectButtonsView draw frame=\(rect)")  // has correct value
         let btnW: CGFloat = 80
         var btnX: CGFloat = 0
         var btnDefault: UIButton?
@@ -54,7 +47,9 @@ class SelectButtonsView: UIScrollView {
             }
         }
         if btnDefault != nil {
-            self.btnClick(btnDefault!)
+            DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
+                self.btnClick(btnDefault!)
+            })
         }
         let contentSize_W = 20 + btnW * CGFloat(arrData.count)
         self.contentSize = CGSize(width: contentSize_W, height: rect.height)
@@ -62,6 +57,9 @@ class SelectButtonsView: UIScrollView {
     }
     
     @objc private func btnClick(_ sender: UIButton) {
+        if sender.isSelected {
+            return
+        }
         for v in self.subviews {
             if v.isMember(of: UIButton.classForCoder()) {
                 let btn = v as! UIButton

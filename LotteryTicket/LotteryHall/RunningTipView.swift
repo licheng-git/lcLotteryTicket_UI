@@ -20,8 +20,6 @@ class RunningTipView: UIView {
         return lb
     } ()
     
-    var bIsRunning = false
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.borderColor = UIColor.lightGray.cgColor
@@ -60,12 +58,16 @@ class RunningTipView: UIView {
     
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
+        if self.superview == nil {
+            return
+        }
         self.lbText.superview?.clipsToBounds = true
     }
     
     func keepRunning() {
         //print("lb.w=\(self.lbText.bounds.size.width), lb.x=\(self.lbText.frame.origin.x)")
-        self.bIsRunning = true
+        self.layoutIfNeeded()
+        //print("lb.w=\(self.lbText.bounds.size.width), lb.x=\(self.lbText.frame.origin.x)")
         let translateX: CGFloat = 5
         UIView.animate(withDuration: 0.1, animations: {
             self.lbText.frame.origin.x -= translateX

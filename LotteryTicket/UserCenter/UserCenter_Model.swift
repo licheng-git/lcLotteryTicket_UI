@@ -10,7 +10,7 @@
 class UserCenter_Model: NSObject {
     var headerImgName: String?
     var account: String?
-    var amount: String?
+    var balance: String?
     var todayProfit: String?
 }
 

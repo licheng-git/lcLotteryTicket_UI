@@ -32,7 +32,7 @@ class UserCenter_ViewModel {
         self.model = UserCenter_Model()
         self.model?.headerImgName = "userHeader"
         self.model?.account = "licheng"
-        self.model?.amount = "2000.00"
+        self.model?.balance = "2000.00"
         self.model?.todayProfit = "0.00"
         if cComplete != nil {
             cComplete!(self.model!)

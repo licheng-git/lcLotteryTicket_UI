@@ -137,20 +137,12 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
             make.bottom.equalToSuperview().offset(-kBOTTOM_HEIGHT)
         }
         
+        self.runningTipView.lbText.text = "卡司秀[CS]官方彩票系统正式与PK平台携手运营 哈哈嘿嘿吼吼卡卡"
+        self.runningTipView.lbText.sizeToFit()
+        self.runningTipView.keepRunning()
+        
         self.accountView.lbAccount.text = "licheng"
-        self.accountView.lbAmount.text = "100.00"
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if !self.runningTipView.bIsRunning {
-            self.runningTipView.lbText.text = "卡司秀[CS]官方彩票系统正式与PK平台携手运营 哈哈嘿嘿吼吼卡卡"
-            if !(self.runningTipView.lbText.text?.isEmpty)! {
-                self.runningTipView.lbText.sizeToFit()
-                self.runningTipView.keepRunning()
-                self.runningTipView.bIsRunning = true
-            }
-        }
+        self.accountView.lbBalance.text = "100.00"
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -177,6 +169,7 @@ class LotteryHallViewController: UIViewController, UICollectionViewDelegate, UIC
         let vc = BuyingDetailViewController()
         vc.detailId = cell.lbName.text!
         self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        //self.tabBarController?.navigationController?.pushViewController(TimerTestViewController(), animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

@@ -79,6 +79,7 @@ class PrizeResultViewController: UIViewController, UITableViewDelegate, UITableV
         let model = self.vm.arrModels_all[indexPath.row]
         cell.lbTitle.text = model.title
         cell.strResult = model.result
+        //cell.fSetResult(model.result!)
         if indexPath.row == 0 {
             cell.lineView_FristCell_Top.isHidden = false
         }

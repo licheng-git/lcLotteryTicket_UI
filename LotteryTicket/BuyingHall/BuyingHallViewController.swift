@@ -45,7 +45,7 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
             make.left.right.equalToSuperview()
         }
         
-        self.selectBtnsView.cBtnClick = { [weak self] (_ index:Int) -> () in
+        self.selectBtnsView.cBtnClick = { [weak self] (index) in
             self?.cleanCellTimer()
             self?.vm.getData(index) { [weak self] (arrModels) in
                 self?.bhTableview.reloadData()
@@ -72,13 +72,12 @@ class BuyingHallViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.imgviewIcon.image = UIImage(named: model.iconImgName!)
         cell.lbName.text = model.name!
         cell.lbDescription.text = model.desc!
-        //cell.lbTime.text = cell.timeConvert(model.time_int!)
         cell.startTimer(model)
         cell.delegate = self
-        cell.cPrizeDetail = { [weak self] (_ cell: BuyingHall_TableCell) -> () in
-            let vc = WebViewController()
-            vc.title = cell.lbName.text! + "奖金详情"
-            vc.url_str = "https://www.baidu.com"
+        //cell.cPrizeDetail = { [weak self] (_ cell: BuyingHall_TableCell) -> () in
+        cell.cPrizeDetail = { [weak self] (cell) in
+            let vc = PrizeDetailViewController()
+            vc.name = model.name!
             self?.tabBarController?.navigationController?.pushViewController(vc, animated: true)
         }
         return cell

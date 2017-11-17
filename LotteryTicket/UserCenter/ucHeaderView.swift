@@ -29,7 +29,7 @@ class ucHeaderView: UIView {
         return lb
     } ()
     
-    lazy var lbAmount: UILabel = {
+    lazy var lbBalance: UILabel = {
         let lb = UILabel()
         lb.textAlignment = .center
         lb.font = UIFont.systemFont(ofSize: 16)
@@ -90,22 +90,22 @@ class ucHeaderView: UIView {
             make.left.right.equalToSuperview()
         }
         
-        amountBgView.addSubview(self.lbAmount)
-        self.lbAmount.snp.makeConstraints { (make) in
+        amountBgView.addSubview(self.lbBalance)
+        self.lbBalance.snp.makeConstraints { (make) in
             make.bottom.equalTo(amountBgView.snp.centerY)
             make.left.equalToSuperview()
             make.right.equalTo(amountBgView.snp.centerX)
             make.height.equalTo(21)
         }
-        let lbAmountDesc = UILabel()
-        lbAmountDesc.text = "可用余额"
-        lbAmountDesc.textAlignment = .center
-        lbAmountDesc.font = UIFont.systemFont(ofSize: 16)
-        lbAmountDesc.textColor = UIColor.gray
-        amountBgView.addSubview(lbAmountDesc)
-        lbAmountDesc.snp.makeConstraints { (make) in
-            make.top.equalTo(self.lbAmount.snp.bottom)
-            make.height.left.right.equalTo(self.lbAmount)
+        let lbBalanceDesc = UILabel()
+        lbBalanceDesc.text = "可用余额"
+        lbBalanceDesc.textAlignment = .center
+        lbBalanceDesc.font = UIFont.systemFont(ofSize: 16)
+        lbBalanceDesc.textColor = UIColor.gray
+        amountBgView.addSubview(lbBalanceDesc)
+        lbBalanceDesc.snp.makeConstraints { (make) in
+            make.top.equalTo(self.lbBalance.snp.bottom)
+            make.height.left.right.equalTo(self.lbBalance)
         }
         
         amountBgView.addSubview(self.lbTodayProfit)

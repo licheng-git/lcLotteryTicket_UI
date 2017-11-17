@@ -11,5 +11,6 @@ target 'LotteryTicket' do
     pod 'MJRefresh'
     pod 'MBProgressHUD'
     pod 'FSPagerView'
+    pod 'IQKeyboardManagerSwift'
     
 end

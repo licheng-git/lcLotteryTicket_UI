@@ -6,16 +6,15 @@
 //  Copyright © 2017年 李诚. All rights reserved.
 //
 
-import UIKit
-
 class bdNavTitleDetailView: UIView {
     
     var cBgViewTap: (()->Void)?
-    var cBtnClick: ((_ btnTitle:String)->())?
+    var cBtnClick_Cell: ((_ btnTitle:String)->())?
+    var cBtnClick_Header: ((_ cell0Btn0Title:String)->())?
     
     private let bgMaskView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.gray
+        view.backgroundColor = UIColor.black
         view.alpha = 0.5
         return view
     } ()
@@ -101,7 +100,12 @@ class bdNavTitleDetailView: UIView {
         }
         
         // cells btns
-        self.loadData_cells(0)
+//        self.loadData_cells(0) { [weak self] (cell0Btn0Title) in
+//            if self?.cBtnClick_Header != nil {  // init时为nil
+//                self?.cBtnClick_Header!(cell0Btn0Title)
+//            }
+//        }
+        self.loadData_cells(0, nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -127,13 +131,17 @@ class bdNavTitleDetailView: UIView {
         sender.isSelected = true
         sender.backgroundColor = UIColor.red
         sender.layer.borderColor = UIColor.red.cgColor
-        self.loadData_cells(sender.tag-kBtnTag_Header)
+        self.loadData_cells(sender.tag-kBtnTag_Header) { [weak self] (cell0Btn0Title) in
+            if self?.cBtnClick_Header != nil {
+                self?.cBtnClick_Header!(cell0Btn0Title)
+            }
+        }
     }
     
     
-    private var bgCellsView: UIView?
+    private var bgCellsView: UIScrollView?
     
-    @objc private func loadData_cells(_ headerIndex: Int) {
+    @objc private func loadData_cells(_ headerIndex: Int, _ cComplete:((_ cell0Btn0Title:String)->Void)?) {
         var arrData_cells = Array<[String:Any]>()
         if headerIndex == 0 {
             arrData_cells = self.arrData_sub_0
@@ -150,7 +158,7 @@ class bdNavTitleDetailView: UIView {
         
         self.bgCellsView?.removeFromSuperview()
         self.bgCellsView = nil
-        self.bgCellsView = UIView()
+        self.bgCellsView = UIScrollView()
         self.bgCellsView?.backgroundColor = UIColor.white
         self.addSubview(self.bgCellsView!)
         self.arrBtns_cells.removeAll()
@@ -213,12 +221,25 @@ class bdNavTitleDetailView: UIView {
             self.bgCellsView?.addSubview(lineView)
         }
         
-        self.bgCellsView?.frame = CGRect(x: 0, y: self.bgHeaderView.frame.maxY, width: kSCREEN_WIDTH, height: bgCellView_Y)
+        let bgCellsView_Y = self.bgHeaderView.frame.maxY
+        let bgCellsView_H = bgCellView_Y
+        let bgCellsView_MaxH = kSCREEN_HEIGHT - kDEFAULT_MARGIN_Y - bgCellsView_Y  - 150
+        if bgCellsView_H < bgCellsView_MaxH {
+            self.bgCellsView?.frame = CGRect(x: 0, y: bgCellsView_Y, width: kSCREEN_WIDTH, height: bgCellsView_H)
+            self.bgCellsView?.isScrollEnabled = false
+        }
+        else {
+            self.bgCellsView?.frame = CGRect(x: 0, y: bgCellsView_Y, width: kSCREEN_WIDTH, height: bgCellsView_MaxH)
+            self.bgCellsView?.contentSize = CGSize(width: kSCREEN_WIDTH, height: bgCellsView_H)
+        }
         
         let btn0 = self.arrBtns_cells[0]
         btn0.isSelected = true
         btn0.backgroundColor = UIColor.red
         btn0.layer.borderColor = UIColor.red.cgColor
+        if cComplete != nil {
+            cComplete!((btn0.titleLabel?.text)!)
+        }
     }
     
     @objc private func btnClick_cell(_ sender: UIButton) {
@@ -231,11 +252,10 @@ class bdNavTitleDetailView: UIView {
         sender.isSelected = true
         sender.backgroundColor = UIColor.red
         sender.layer.borderColor = UIColor.red.cgColor
-        if self.cBtnClick != nil {
+        if self.cBtnClick_Cell != nil {
             let btnTitle = sender.titleLabel?.text
-            self.cBtnClick!(btnTitle!)
+            self.cBtnClick_Cell!(btnTitle!)
         }
     }
     
 }
-

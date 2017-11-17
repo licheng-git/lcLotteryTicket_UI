@@ -11,7 +11,7 @@ import UIKit
 class AccountView: UIView {
     
     @IBOutlet weak var lbAccount: UILabel!
-    @IBOutlet weak var lbAmount: UILabel!
+    @IBOutlet weak var lbBalance: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

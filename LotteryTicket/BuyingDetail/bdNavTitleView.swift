@@ -6,8 +6,6 @@
 //  Copyright © 2017年 李诚. All rights reserved.
 //
 
-import UIKit
-
 class bdNavTitleView: UIView {
     
     var cBtnClick_Toggle: ((_ bToHidden:Bool)->Void)?
@@ -19,16 +17,20 @@ class bdNavTitleView: UIView {
         btn.backgroundColor = UIColor.clear
         btn.setTitle("变化的title", for: .normal)
         btn.setImage(UIImage(named: "btn_arrow_down"), for: .normal)
-        btn.setImage(UIImage(named: "btn_arrow_up"), for: .selected)  // 缺少动画效果
-        btn.layoutIfNeeded()
-        btn.titleEdgeInsets = UIEdgeInsetsMake(0, -(btn.currentImage?.size.width)!, 0, (btn.currentImage?.size.width)!)
-        btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: (btn.titleLabel?.bounds.width)!+10, bottom: 0, right: -(btn.titleLabel?.bounds.size.width)!)
+        btn.setImage(UIImage(named: "btn_arrow_up"), for: .selected)  // 无动画效果
+        // *_* frame
+        //btn.layoutIfNeeded()
+        //let btnImgSize = btn.currentImage!.size
+        let btnImgSize = btn.imageView!.frame.size
+        let btnLbSize = btn.titleLabel!.frame.size
+        btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: -btnImgSize.width, bottom: 0, right: btnImgSize.width)
+        btn.imageEdgeInsets = UIEdgeInsetsMake(0, btnLbSize.width+10, 0, -btnLbSize.width)
         return btn
     } ()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.lcAddObservers()
+        self.lcAddObservers()  // kvo监测btn.titleLabel.text
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -76,9 +78,10 @@ class bdNavTitleView: UIView {
         //if keyPath == "btnTitle.titleLabel.text" {
         //    let btn = (object as! bdNavTitleView).btnTitle
             DispatchQueue.main.asyncAfter(deadline: .now()) {
-                btn.layoutIfNeeded()
-                btn.titleEdgeInsets = UIEdgeInsetsMake(0, -(btn.currentImage?.size.width)!, 0, (btn.currentImage?.size.width)!)
-                btn.imageEdgeInsets = UIEdgeInsets(top: 0, left: (btn.titleLabel?.bounds.width)!+10, bottom: 0, right: -(btn.titleLabel?.bounds.size.width)!)
+                let btnImgSize = btn.imageView!.frame.size
+                let btnLbSize = btn.titleLabel!.frame.size
+                btn.titleEdgeInsets = UIEdgeInsets(top: 0, left: -btnImgSize.width, bottom: 0, right: btnImgSize.width)
+                btn.imageEdgeInsets = UIEdgeInsetsMake(0, btnLbSize.width+10, 0, -btnLbSize.width)
             }
         }
     }

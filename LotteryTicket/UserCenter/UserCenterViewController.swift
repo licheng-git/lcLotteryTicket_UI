@@ -49,7 +49,7 @@ class UserCenterViewController: UIViewController, UITableViewDelegate, UITableVi
         self.vm.getHeaderData() { [weak self] (model) in
             self?.headerView.imgviewHeader.image = UIImage(named: model.headerImgName!)
             self?.headerView.lbAccount.text = model.account
-            self?.headerView.lbAmount.text = model.amount
+            self?.headerView.lbBalance.text = model.balance
             self?.headerView.lbTodayProfit.text = model.todayProfit
         }
     }
